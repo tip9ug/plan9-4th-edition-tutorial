@@ -23,6 +23,13 @@ CD-ROM drive with write capability to get the distribution on a CD.
 If you wish to install over the internet, you need a supported Ethernet card 
 or a PPP dial-up account using a modem (not a Winmodem). 
 ```
+### Site Planning
+
+There is nothing magical about installing Plan 9. It's just a matter of populating a Plan 9 file system (typically a fossil file system) and arranging a bootstrap to eventually load a Plan 9 kernel that can use that file system as its root.
+
+Once that initial file server is running, enabling authentication and pxe booting (bootp and tftp) will allow all other local Plan 9 systems to load kernels from the file server and share its file system.
+
+If you find yourself reinstalling Plan 9 frequently, something is wrong. This should not be necessary. In particular, there is no need to give each Plan 9 system its own file system.
 
 ### Tested hardware
 
