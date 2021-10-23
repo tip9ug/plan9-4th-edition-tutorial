@@ -178,13 +178,13 @@ In order to boot into Plan 9, another bootstrap program must locate this partiti
 
 The boot methods are:
 
-    floppy. Create a boot floppy. In addition to a bootstrap program, the floppy will contain a kernel and a backup of your plan9.ini file named plan9ini.bak, but will not use them. Instead, the floppy will load plan9.ini and the kernel from your 9fat partition. To boot the kernel on the floppy (useful as a rescue mechanism if you trash your 9fat partition), copy plan9ini.bak to plan9.ini and change the line bootfile=sdXX!9fat!9pcdisk to bootfile=fd0!9pcdisk.gz.
+ -  floppy. Create a boot floppy. In addition to a bootstrap program, the floppy will contain a kernel and a backup of your plan9.ini file named plan9ini.bak, but will not use them. Instead, the floppy will load plan9.ini and the kernel from your 9fat partition. To boot the kernel on the floppy (useful as a rescue mechanism if you trash your 9fat partition), copy plan9ini.bak to plan9.ini and change the line bootfile=sdXX!9fat!9pcdisk to bootfile=fd0!9pcdisk.gz.
 
-    plan9. Set the Plan 9 partition to be the active one (i.e. the partition booted by default). This is only useful if you have installed Plan 9 on your first hard disk (for IDE systems, sdC0). You can always set another partition active later by using disk/fdisk.
+ -  plan9. Set the Plan 9 partition to be the active one (i.e. the partition booted by default). This is only useful if you have installed Plan 9 on your first hard disk (for IDE systems, sdC0). You can always set another partition active later by using disk/fdisk.
 
-    win9x. Edit the Windows startup menu to list Plan 9 as an option. Your c:\config.sys and c:\autoexec.bat files will be saved as config.p9 and autoexec.p9, and then edited. A bootstrap program as well as plan9ini.bak and a kernel will be copied to the directory c:\plan9 (created if necessary). The procedure described above for rescue works here too, but the bootfile should become sdC0!dos!plan9/9pcdisk. This may or may not work with Windows Me. We have not tried it.
+ -  win9x. Edit the Windows startup menu to list Plan 9 as an option. Your c:\config.sys and c:\autoexec.bat files will be saved as config.p9 and autoexec.p9, and then edited. A bootstrap program as well as plan9ini.bak and a kernel will be copied to the directory c:\plan9 (created if necessary). The procedure described above for rescue works here too, but the bootfile should become sdC0!dos!plan9/9pcdisk. This may or may not work with Windows Me. We have not tried it.
 
-    winnt. Edit the Windows NT/2000/XP boot menu to list Plan 9 as an option. This is only possible when your ``c:'' drive is a FAT partition, since the boot configuration must be accessible. Your c:\boot.ini file will be saved as boot.p9, and then edited. This will also create the file c:\bootsect.p9, which the boot manager will use to load Plan 9.
+ -  winnt. Edit the Windows NT/2000/XP boot menu to list Plan 9 as an option. This is only possible when your ``c:'' drive is a FAT partition, since the boot configuration must be accessible. Your c:\boot.ini file will be saved as boot.p9, and then edited. This will also create the file c:\bootsect.p9, which the boot manager will use to load Plan 9.
 
 ### Finish
 
