@@ -1,7 +1,7 @@
 ## Installation
 
 
-## BOOT THE INSTALLATION CD
+### Boot the installation CD
 
 (NOTE on vmware fusion for Mac OS X, you probably want to use SCSI disks as the IDE emulation makes Plan 9 difficult to boot at this time. SCSI on the other hand works VERY fast for booting and installtion)
 
@@ -29,7 +29,7 @@ Last you will be asked for your vga settings, the default resolution is the safe
 
 Note: If you know your videocard is not supported, answer "vesa" when prompted for a monitor type.
 
-## BEGINNING THE INSTALLATION
+### Begin the installation
 
 If your video card and resolution is supported (or you selected vesa) the window system will start.
 
@@ -57,11 +57,11 @@ The installation program is structured as a sequence of tasks that must be perfo
 
 At each step, you will be shown the list of completed tasks and the list of tasks that are ready to be done. Task names appear in parentheses in the text that follows. Typing <control-d> at any prompt will abort the current task and return you to the main menu.
 
-## CHOOSE A FILESYSTEM
+### Choose a filesystem
 
 (Configfs) Fossil(4) is the Plan 9 fileserver. Venti(8) is an archival block storage server. You may run fossil on its own or as a write buffer backed by a Venti server. The primary value of using Venti is to store daily snapshots of your filesystem (see yesterday(1)).
 
-## PARTITION YOUR HARD DISK
+### Partition your Hard Disk Drive (HDD)
   
 (Partdisk) First you need to setup a partition for Plan 9. If you want to boot Plan 9 directly or via a boot loader like LILO or the Windows boot menu, you need to allocate a primary partition. If you are content to boot from a floppy disk or from DOS via ld.com (see 9load(8)), you can use a secondary partition.
 
@@ -108,7 +108,7 @@ Create the Plan 9 partition and quit fdisk.
 
 See prep(8) for more information on using fdisk.
 
-## PREPARE THE PLAN 9 PARTITION
+### Prepare the Plan 9 Partition
 
 (Prepdisk) Plan 9 partitions are further subdivided into named partitions. You need to use disk/prep to create partitions named 9fat, fossil, swap and if you selected fossil+venti arenas and isect, disk/prep will suggest a sensible layout.
 
@@ -116,7 +116,7 @@ Note that 9fat must be at the beginning of the Plan 9 partition in order to boot
 
 See prep(8) for more information on using prep.
 
-## FORMAT FOSSIL
+### Format Fossil
 
 (fmtfossil) You will be prompted for the fossil partition to format, which should have been created in the previous step.
 CHOOSE AND MOUNT THE FILE SYSTEM TO INSTALL ON
@@ -140,7 +140,7 @@ If you use CHAP, the install process will prompt for a phone number (exactly as 
 
 Once the download is complete, you may wish to run the task stopppp to hang up your PPP connection. Similarly, stopether will deactivate your Ethernet connection.
 
-## LOCATE AND MOUNT THE DISTRIBUTION ARCHIVE
+### Locate and mount the distribution archive
 
 (Mountdist) If you downloaded the archive, the install program has written it to /dist on your chosen partition. The install program will run mountdist with this information for you, so you can skip to the next step.
 
@@ -157,18 +157,18 @@ When prompted for "Distribution disk" the usual value is /dev/sdD0/data (but you
 Once you have chosen a file system, you need to point out the directory containing the archive. Type a slash-separated path name relative to the root of the chosen file system. If you type ``browse'' instead of a directory name, you will be dropped into a minimal shell that you can use to find the files. Specifically, the shell has three commands: ``cd dir''; changes directories, ``lc''; prints a columnated list of files for the current directory, and ``exit''. Once you are in the directory containing the archive (or if you give up the search), exit the shell.
 
 
-## FORMAT VENTI (OPTIONAL)
+### Format Venti (OPTIONAL)
 
 (fmtventi) If you selected fossil+venti you will now be prompted for the arenas and index (isect) partitions usually created during the 'prepdisk' step, in that case the default values should be all you need.
 
 Note that this step can take a long time with slow disks or qemu.
 
-## COPY THE ARCHIVE TO THE FILE SYSTEM
+### COPY THE ARCHIVE TO THE FILE SYSTEM
 
 (Copydist) Once the archive has been located or downloaded, selecting unpack will extract the distribution archive to the newly created fossil file system. The log window will display the name and size of each file as it is extracted. This takes anywhere from 10 minutes to an hour depending on the speed of your computer and disks.
 
 
-## CONFIGURE ONE OR MORE WAYS TO BOOT PLAN 9
+### Configure one or more ways to boot Plan 9
 
 (Bootsetup) The first time you run bootsetup, it initializes the 9fat configuration partition with the appropriate bootstrap code as well as a modified version of your plan9.ini from the boot floppy or CD and a 9pcf kernel.
 
@@ -184,6 +184,6 @@ The boot methods are:
 
     winnt. Edit the Windows NT/2000/XP boot menu to list Plan 9 as an option. This is only possible when your ``c:'' drive is a FAT partition, since the boot configuration must be accessible. Your c:\boot.ini file will be saved as boot.p9, and then edited. This will also create the file c:\bootsect.p9, which the boot manager will use to load Plan 9.
 
-## FINISH
+### Finish
 
 (Finish) Choosing the finish task will halt the file system and print a message saying it is safe to reboot your computer.
