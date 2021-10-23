@@ -1,0 +1,44 @@
+{%- extends "layout.html" %}
+{%- block header %}
+		<style>
+		.epub-cover{
+  			font-family:"Nimbus Sans", sans-serif;
+  			font-size: 48;
+  			font-style: normal;
+  			font-variant: normal;
+  			font-weight: bold;
+  			line-height: 1.0;
+  			margin: 50vh 0 0 0;  /* vh stands for viewport height*/
+  			-webkit-transform: translateY(-50%);
+  			transform: translateY(-50%);
+  			color: white;
+  			orphans: 1;
+  			page-break-after: auto;
+  			page-break-before: auto;
+  			text-align: center;
+  			text-decoration: none;
+  			text-indent: 0;
+  			text-transform: none;
+  			widows: 1;
+		}
+		body{
+			background-color:grey;
+		}
+		</style>
+{% endblock %}
+{%- block rootrellink %}{% endblock %}
+{%- block relbaritems %}{% endblock %}
+{%- block sidebarlogo %}{% endblock %}
+{%- block linktags %}{% endblock %}
+{%- block relbar1 %}{% endblock %}
+{%- block sidebar1 %}{% endblock %}
+{%- block sidebar2 %}{% endblock %}
+{%- block footer %}{% endblock %}
+
+{% block content %}
+  		<div class="epub-cover">
+    		<img src="{{ image }}" alt="Cover image" />
+    		<p><h1>{{ title }}</h1></p>
+    		<p>Documentation</p>
+  		</div>
+{% endblock %}
