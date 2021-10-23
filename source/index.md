@@ -1,4 +1,4 @@
-Welcome to the Plan 9 Documentation Project!
+Welcome to the Plan 9 (4th Edition) Tutorial
 ============================================
 
 ## Introduction
