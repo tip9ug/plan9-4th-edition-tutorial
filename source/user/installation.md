@@ -156,7 +156,7 @@ The archive may be in one of three forms:
 
 When prompted for "Distribution disk" the usual value is /dev/sdD0/data (but your CD drive may be a different sdXX).
 
-Once you have chosen a file system, you need to point out the directory containing the archive. Type a slash-separated path name relative to the root of the chosen file system. If you type ``browse'' instead of a directory name, you will be dropped into a minimal shell that you can use to find the files. Specifically, the shell has three commands: ``cd dir''; changes directories, ``lc''; prints a columnated list of files for the current directory, and ``exit''. Once you are in the directory containing the archive (or if you give up the search), exit the shell.
+Once you have chosen a file system, you need to point out the directory containing the archive. Type a slash-separated path name relative to the root of the chosen file system. If you type "browse" instead of a directory name, you will be dropped into a minimal shell that you can use to find the files. Specifically, the shell has three commands: "cd dir"; changes directories, "lc"; prints a columnated list of files for the current directory, and "exit". Once you are in the directory containing the archive (or if you give up the search), exit the shell.
 
 
 ### Format Venti (Optional)
