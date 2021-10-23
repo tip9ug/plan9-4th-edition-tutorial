@@ -14,6 +14,6 @@ user/components
 user/troubleshooting
 user/FAQ
 user/feedback
-user/acknowledgements
+user/acknowledgments
 ```
 
