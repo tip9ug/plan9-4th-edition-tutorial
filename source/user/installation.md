@@ -165,7 +165,7 @@ Once you have chosen a file system, you need to point out the directory containi
 
 Note that this step can take a long time with slow disks or qemu.
 
-### COPY THE ARCHIVE TO THE FILE SYSTEM
+### Copy the archive to the file system
 
 (Copydist) Once the archive has been located or downloaded, selecting unpack will extract the distribution archive to the newly created fossil file system. The log window will display the name and size of each file as it is extracted. This takes anywhere from 10 minutes to an hour depending on the speed of your computer and disks.
 
