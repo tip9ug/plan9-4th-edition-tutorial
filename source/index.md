@@ -13,7 +13,7 @@ contributor/Get_Involved
 ```
 
 ```{toctree}
-:caption: Plan 9 User Guide
+:caption: Plan 9 Tutorial
 :hidden:
 
 user/getting-started
