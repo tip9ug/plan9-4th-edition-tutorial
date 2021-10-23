@@ -1,5 +1,5 @@
-Welcome to the Plan 9 (4th Edition) Tutorial
-============================================
+Plan 9 (4th Edition) Tutorial
+=============================
 
 ## Introduction
 
