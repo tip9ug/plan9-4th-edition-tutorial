@@ -119,10 +119,12 @@ See prep(8) for more information on using prep.
 ### Format Fossil
 
 (fmtfossil) You will be prompted for the fossil partition to format, which should have been created in the previous step.
-CHOOSE AND MOUNT THE FILE SYSTEM TO INSTALL ON
+
+### Choose and mount the file system to install on
 
 (Mountfs) You will be prompted to choose a fossil partition to install onto (and which will hold your data). The default should be the partition you formatted in the previous step.
-CHOOSE HOW TO OBTAIN THE DISTRIBUTION ARCHIVE
+
+### Choose how to obtain the distributon archive
 
 (Configdist) Now you have to select where the distribution archive will be obtained from: local media or the network. If you are installing from the CD select 'local' and skip ahead to the next section.
 
@@ -148,16 +150,16 @@ Otherwise, mountdist presents you with a list of FAT (DOS, Windows), ISO-9660 (C
 
 The archive may be in one of three forms:
 
-    A bzipped CD image named plan9.iso.bz2. This is the file you obtain from the download page on the Bell Labs server.
-    A CD image named plan9.iso. This is the result of uncompressing plan9.iso.bz2. If you store the uncompressed image on a FAT file system beforehand, then the install program will not need to uncompress it, which will save disk space on the file system.
-    The contents of the CD image, in a directory tree. This is the CD image itself, typically written to a CD.
+ -  A bzipped CD image named plan9.iso.bz2. This is the file you obtain from the download page on the Bell Labs server.
+ -  A CD image named plan9.iso. This is the result of uncompressing plan9.iso.bz2. If you store the uncompressed image on a FAT file system beforehand, then the install program will not need to uncompress it, which will save disk space on the file system.
+ -  The contents of the CD image, in a directory tree. This is the CD image itself, typically written to a CD.
 
 When prompted for "Distribution disk" the usual value is /dev/sdD0/data (but your CD drive may be a different sdXX).
 
 Once you have chosen a file system, you need to point out the directory containing the archive. Type a slash-separated path name relative to the root of the chosen file system. If you type ``browse'' instead of a directory name, you will be dropped into a minimal shell that you can use to find the files. Specifically, the shell has three commands: ``cd dir''; changes directories, ``lc''; prints a columnated list of files for the current directory, and ``exit''. Once you are in the directory containing the archive (or if you give up the search), exit the shell.
 
 
-### Format Venti (OPTIONAL)
+### Format Venti (Optional)
 
 (fmtventi) If you selected fossil+venti you will now be prompted for the arenas and index (isect) partitions usually created during the 'prepdisk' step, in that case the default values should be all you need.
 
