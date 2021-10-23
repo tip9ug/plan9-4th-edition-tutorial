@@ -2,7 +2,7 @@
 
 ## Status
 
-Plan 9 is available for general use. 
+Plan 9 (4th Edition) is available for general use. 
 
 ## System requirements
 
