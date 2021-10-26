@@ -10,7 +10,6 @@ In general, Plan9 is considered beyond the average computer user's knowledge. We
 :hidden:
 
 user/getting-started
-user/installation
 user/components
 user/troubleshooting
 user/FAQ
